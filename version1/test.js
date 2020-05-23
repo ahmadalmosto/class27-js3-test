@@ -11,7 +11,20 @@ Write a function that:
 Hint: use the modulo operator (%) to figure out if it's a multiple of 3/5. Make sure the remainder is 0, in order to pass the condition.
 Hint: the order of conditional statements is important!
 */
-
+// function getNumber(){
+//     for(let i=1;i<=100;i++){
+//         if(i%3==0 && i%5==0){
+//            console.log('jackPot') 
+//         }else if(i%3==0){
+//             console.log("multiple of 3")
+//         }else if(i%5==0){
+//             console.log("This is a multiple of 5")
+//         }else{
+//             console.log(i);
+//         }
+//     }
+// }
+// getNumber();
 /*
 2.
 Using JavaScript only (adding HTML to index.html is NOT allowed), create a function that:
@@ -20,7 +33,21 @@ Using JavaScript only (adding HTML to index.html is NOT allowed), create a funct
 - When the button is clicked, inserts an image URL into an <img> tag and remove the button
 - Use the following image URL: https://avatars3.githubusercontent.com/u/20858568?s=200&v=4
 */
-
+// function appendImage(){
+//     const body = document.querySelector('body')
+//     const button = document.createElement('button')
+//     const img = document.createElement('img')
+//     // const img = document.createElement('img');
+    
+//     body.appendChild(button);
+//     body.appendChild(img);
+//     button.innerText='click me!'
+//     button.addEventListener('click',()=>{
+// img.src='https://avatars3.githubusercontent.com/u/20858568?s=200&v=4';
+// button.remove();
+//     })
+// }
+// appendImage();
 /* 
 3. 
 Answer the following questions:
@@ -29,7 +56,8 @@ Answer the following questions:
 
 Explain each in 200 words or less. 
 */
-
+// api its allow two applications talk to each other like weather app;
+// api allow to use github api and display information about HackYourRepo 
 /*
 4.
 Write a function that:
@@ -40,7 +68,28 @@ Write a function that:
 - Creates an <ul> for each user
 - Makes use of async/await
 */
-
+// async function fetchApi(){
+    
+//     const url = 'https://reqres.in/api/users';
+//     const response = await fetch(url);
+//     const text = await response.json();
+//     const dataArr = text.data;
+//     console.log(dataArr)
+//     // return parseInt(text);
+//     console.log(text.data)
+//     console.log(text.data[0].last_name)
+//     dataArr.forEach(element => {
+//         console.log(element.last_name)
+//         const body = document.querySelector('body')
+//         const ul = document.createElement('ul');
+//         body.appendChild(ul);
+//         ul.innerText = element.first_name +" "+ element.last_name;
+//     });
+  
+// }
+// fetchApi().then(()=>{
+//     console.log('done')
+// })
 /*
 5.
 a) Create a class, called Person, that includes:
@@ -52,7 +101,17 @@ b) Instantiate the class, and give it your name + attributes
 
 c) Explain how this class relates Object-Oriented Programming (OOP) in 100 words or less
 */
-
+class Person{
+    constructor(name,age,city){
+        this._name = name;
+        this._age = age;
+        this._city= city;
+    }
+    get name(){
+        return this._name;
+    }
+}
+const myInfo= new Person('ahmad',32,'Assen')
 /*
 6. 
 a) Implement the following JavaScript library: https://www.chartjs.org/
